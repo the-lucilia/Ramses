@@ -18,7 +18,7 @@ bot = commands.Bot(command_prefix=".", intents=intents)
 # This runs when bot is ready, we have it load all of our cogs
 @bot.event
 async def on_ready():
-    print("Ready to go!")
+    # print("Ready to go!")
     await bot.change_presence(activity=discord.Game(name="in the sand"))
 
     # When we are ready we want to load all cogs from the cogs directory
@@ -29,6 +29,7 @@ async def on_ready():
                 print(f'Loaded {filename[:-3]}')
             except Exception as e:
                 print(f'Failed to load {filename[:-3]}\tError {e}')
+    print("Ready to rock'n'roll!")
 
 
 # This is reading out our token from token.txt and running the bot with it
